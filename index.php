@@ -44,54 +44,15 @@
     
 </header>
 
-<div id="carouselExampleIndicators" class="carousel" data-bs-ride="true" >
-
-    <!-- Les indicateurs (slide actif) du carousel -->
-    <div class="carousel-indicators" >
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-    <!-- Les slides du carousel -->
-    <div class="carousel-inner">
-
-        <!-- Slide 1 (slide actif) -->
-        <div class="carousel-item active">
-
-            <!-- La row -->
-            <div class="row" >
-
-                <!-- Les colonnes responsives : N colonnes -->
-                <div class="col-md-3 col-sm-6 col-6" ></div>
-                <div class="col-md-3 col-sm-6 col-6" ></div>
-                <div class="col-md-3 col-sm-6 col-6" ></div>
-                <div class="col-md-3 col-sm-6 col-6" ></div>
-
-            </div>
-
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item"></div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item"></div>
-
-    </div>
-
-    <!-- Les boutons suivant et pécédent -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-
+<div class="carousel slide" data-ride="carousel">
+  
 </div>
+<div class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    
+  </div>
+</div>
+
 
 <div class="card">
     <h1 class="films_affiche">Films à l'affiche</h1>
