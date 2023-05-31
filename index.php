@@ -21,7 +21,7 @@
     <div class="contener_logo">
         <img src="image/logo.jpg" alt="" height="80px" width="80px">
         <h1 class="titre_logo">Video online</h1>
-        <button class="deconexion" type="button" url="">Déconexion</button>
+        <button class="deconnexion" type="button" url="deconnexion.php">Déconnexion</button>
     </div>
     <div class="contener_recherche">
     <button class="favorite styled" type="button" url="">Horreur</button>
@@ -31,18 +31,50 @@
     <button class="favorite styled" type="button" url="">Action</button>
     <button class="favorite styled" type="button" url="">Comédie</button>
     <button class="favorite styled" type="button" url="">Western</button>
-    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search">
-
+    <div class="case_recherche">
+            <input type="text" id="rechercher" placeholder="Rechercher"> 
+            <button class="rechercher">Rechercher</button>
     </div>
+        
+    
 </header>
 
 
 
-<section class="card">
+<div class="card">
     <h1 class="films_affiche">Films à l'affiche</h1>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+ <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+</div>
+<footer>
+    <img src="image/logo.jpg" alt="" height="230px" width="auto">
+    <ul class="nav1">
+        <li><a class="svg-icon" href="">Contactez-nous</a></li>
+        <li><a class="svg-icon" href="index.php">Navigation</a></li>
+        <li><a class="svg-icon" href="">Films à l'affiche</a></li>
+        <li><a class="svg-icon" href="">A propos</a></li>
+      </ul>
+      <article class="telecharger">
+        <figure>
+            <img class="uber2" src="img/images/logo_uberEats_2.svg" alt="">
+        </figure>
+        <figcaption><p>Téléchargez Vidéo online app</p></figcaption>
+            <button class="telecharger"><img src="image/logo_google_play.svg">GOOGLE PLAY</button>
+            <button class="telecharger"><img src="image/logo_apple.svg">APPLE STORE</button>
+        </article>
+    
 
-</section>
-
+</footer>
 
 
 <script src="js/bootstrap.bundle.min.js"></script> 
