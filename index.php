@@ -38,7 +38,7 @@
 </header>
 
 
-</style>
+
 </head>
 <body>
 
