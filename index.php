@@ -27,9 +27,7 @@
       <button class="rechercher">Rechercher</button>
     </div>
     <div class="burger-menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+      <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
     </div>
     <div class="burger-links">
       <button class="favorite styled" type="button" url="">Horreur</button>
