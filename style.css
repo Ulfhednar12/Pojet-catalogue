@@ -97,6 +97,10 @@ header {
   background-size: 15px;
 }
 
+.burger-icon {
+  display: none;
+}
+
 /*** Responsive ***/
 
 
@@ -127,10 +131,11 @@ header {
   }
 
   .burger-icon {
+    display: block;
     background-color: black;
     width: 40px;
     height: 40px;
-    cursor: pointer;
+    
   }
 
   .burger-links {
@@ -145,6 +150,7 @@ header {
   .burger-menu:hover + .burger-links {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
   }
 }
 
