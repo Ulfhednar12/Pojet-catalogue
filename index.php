@@ -16,26 +16,34 @@
 <body>
 
 <header>
-    <div class="contener_logo">
-        <img src="image/logo.jpg" alt="" height="80px" width="80px">
-        <h1 class="titre_logo">Video online</h1>
-        <button class="deconnexion" type="button" url="deconnexion.php">Déconnexion</button>
-    </div>
-    <div class="contener_recherche">
-    <button class="favorite styled" type="button" url="">Horreur</button>
-    <button class="favorite styled" type="button" url="">Sci-fi</button>
-    <button class="favorite styled" type="button" url="">Thriller</button>
-    <button class="favorite styled" type="button" url="">Romance</button>
-    <button class="favorite styled" type="button" url="">Action</button>
-    <button class="favorite styled" type="button" url="">Comédie</button>
-    <button class="favorite styled" type="button" url="">Western</button>
+  <div class="contener_logo">
+    <img src="image/logo.jpg" alt="" height="80px" width="80px">
+    <h1 class="titre_logo">Video online</h1>
+    <button class="deconnexion" type="button" url="deconnexion.php">Déconnexion</button>
+  </div>
+  <div class="contener_recherche">
     <div class="case_recherche">
-            <input type="text" id="rechercher" placeholder="Rechercher"> 
-            <button class="rechercher">Rechercher</button>
+      <input type="text" id="rechercher" placeholder="Rechercher">
+      <button class="rechercher">Rechercher</button>
     </div>
-        
-    
+    <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="burger-links">
+      <button class="favorite styled" type="button" url="">Horreur</button>
+      <button class="favorite styled" type="button" url="">Sci-fi</button>
+      <button class="favorite styled" type="button" url="">Thriller</button>
+      <button class="favorite styled" type="button" url="">Romance</button>
+      <button class="favorite styled" type="button" url="">Action</button>
+      <button class="favorite styled" type="button" url="">Comédie</button>
+      <button class="favorite styled" type="button" url="">Western</button>
+    </div>
+  </div>
 </header>
+
+
 
 
 
@@ -47,37 +55,37 @@
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
+  
   <img src="image/advenger.png" style="width:100%">
   <div class="text">Advengers</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
+  
   <img src="image/Joker.jpg" style="width:100%">
   <div class="text">Joker</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
+  
   <img src="image/Wonder-Woman.jpg" style="width:100%">
   <div class="text">Wonder Woman</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
+  
   <img src="image/Ambulance.jpg" style="width:100%">
   <div class="text">Ambulance</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
+  
   <img src="image/dunkerque.jpg" style="width:100%">
   <div class="text">Dunkerque</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
+  
   <img src="image/topgun.jpg" style="width:100%">
   <div class="text">Top Gun</div>
 </div>
@@ -119,46 +127,98 @@ function showSlides() {
 
 
 
-<div class="">
+
     <h1 class="films_affiche">Films à l'affiche</h1>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/Leon_reference.jpg" class="card-img-top" alt="..." height="250px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Léon</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/legend.jpg" class="card-img-top" alt="..." height="250px" width="auto">
+<div class="align_card">
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/legend.jpg" class="card-img-top" alt="..." height="450px" width="auto">
       <div class="card-body">
         <h5 class="card-title">Je suis une légende</h5>
-        <p class="card-text">This is a short card.</p>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/pirate.jpg" class="card-img-top" alt="..." he>
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/venum.jpg" class="card-img-top" alt="..." height="450px" width="auto">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Venum</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/Avatar.jpg" class="card-img-top" alt="..." height="450px" width="auto">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Avatar</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/pirate.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Pirates des Caraïbes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/leon.webp" class="card-img-top" alt="..." height="450px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Léon</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/transformers3.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Transformers 3</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/parker.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Parker</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img src="image/harry.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Harry Potter</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+  
 
 
 
