@@ -55,7 +55,7 @@
 <div class="mySlides fade">
   <div class="numbertext">2 / 5</div>
   <img src="image/Joker.jpg" style="width:100%">
-  <div class="text">Jocker</div>
+  <div class="text">Joker</div>
 </div>
 
 <div class="mySlides fade">
@@ -119,21 +119,49 @@ function showSlides() {
 
 
 
-<div class="card">
+<div class="">
     <h1 class="films_affiche">Films à l'affiche</h1>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
- <p>dhfrssssssrrdddddddddddddddddddddddddddddddddddddddjhkllllllllllllllleufolshfffffuizzzzzzzzzzzzgflhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiizllllllllllllffffffffffffffffffffffffffffffffffffffffiullllll</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="image/Leon_reference.jpg" class="card-img-top" alt="..." height="250px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Léon</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="image/legend.jpg" class="card-img-top" alt="..." height="250px" width="auto">
+      <div class="card-body">
+        <h5 class="card-title">Je suis une légende</h5>
+        <p class="card-text">This is a short card.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="image/pirate.jpg" class="card-img-top" alt="..." he>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
 <footer>
     <img src="image/logo.jpg" alt="" height="230px" width="auto">
     <ul class="nav1">
