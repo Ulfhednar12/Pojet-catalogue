@@ -1,5 +1,5 @@
 <?php 
-  session_start();
+  
  if(!empty($_POST)){
     
     if(isset($_POST["nickname"], $_POST["email"], $_POST["pass"]) && !empty($_POST["nickname"]) && !empty($_POST["email"]) && !empty($_POST["pass"])
@@ -15,21 +15,8 @@
         $query->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
-     
 
-        $id = $db->lastInsertId();
-      
-
-
-        $_SESSION["user"] = [
-            "id" => $user["id"],
-            "pseudo" => $user["username"],
-            "email" => $user["email"],
-            "roles" => $user["ROLE_USER"]
-        ];
-
-
-        header("location: profil.php");
+        header("location: connexion.php");
   }
  }
 
