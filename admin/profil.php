@@ -3,7 +3,7 @@
 
     require "connect.php";
     $sql = "SELECT * FROM film 
-    LEFT JOIN categorie ON film.idcategorie=categorie.idcategorie";
+    LEFT JOIN categorie ON film.idcategorie=categorie.idcategorie"; //jointure qui relie idcategorie de la table categorie à l id categorie de ta table film
     $query = $db->prepare($sql);
 
     $query->execute();
@@ -43,7 +43,7 @@
       <td><?= $valeur['description'] ?></td>
       <td class="image"><img src="IMG/<?= $valeur['image'] ?>"></td>
       <td><iframe width="300" height="150" src="<?= $valeur['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
-      <td><?= $valeur['nomdecategorie'] ?></td>
+      <td><?= $valeur['nomdecategorie'] ?></td><!-- nom de categorie par rapport à la jointure faite entre la table film et categorie -->
     </tr>
     <?php } ?>
 

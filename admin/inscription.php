@@ -29,29 +29,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    
+<div class="formulaire"> 
 <h1>Incription</h1>
+
 <form method="post">
-<div>
-    <label for="pseudo">pseudo</label>
-    <input type="text" name="nickname" id="pseudo">
+
+<div class="mb-3">
+    <label for="pseudo" class="form-label">pseudo</label>
+    <input type="text" class="form-control" name="nickname" id="pseudo">
 </div>
-<div>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email">
+<div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" id="email">
 </div>
 
-<div>
-    <label for="pass">Mot de Passe</label>
-    <input type="password" name="pass" id="pass">
+<div class="mb-3">
+    <label for="pass" class="form-label">Mot de Passe</label>
+    <input type="password" class="form-control" name="pass" id="pass">
 </div>
-<button type="submit">M'inscrire</button>
+<p>Déjà un compte <a href="connexion.php">Se connecter</a></p>
+<button type="submit" class="btn btn-primary">M'inscrire</button>
 
 </form>
-
+</div>
 
 
 
