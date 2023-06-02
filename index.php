@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +29,8 @@
   <div class="contener_logo">
     <img src="image/logo.jpg" alt="" height="80px" width="80px">
     <h1 class="titre_logo">Video online</h1>
-    <button class="deconnexion" type="button" url="deconnexion.php">Déconnexion</button>
+    <img src="" alt="">
+    
   </div>
   <div class="contener_recherche">
     <div class="case_recherche">
@@ -37,6 +48,8 @@
       <button class="favorite styled" type="button" url="">Action</button>
       <button class="favorite styled" type="button" url="">Comédie</button>
       <button class="favorite styled" type="button" url="">Western</button>
+      <button class="deconnexion" type="button" url="deconnexion.php">Déconnexion</button>
+
     </div>
   </div>
 </header>
