@@ -1,11 +1,29 @@
 
+<?php
+// Connexion à la base de données
+  if ($_POST){
+    if (isset($_POST["film"])
+        && isset($_POST["categorie"])
+        
+) {
+   //print_r($_POST);
+   require_once("connect.php");
+   $film = strip_tags($_POST["film"]);
+   $categorie = strip_tags($_POST["categorie"]);
+   // INSERT INTO, introduit des infos dans la table
+   $sql = "INSERT INTO video_online (film, categorie) VALUES (:film, :categorie)";
+   $query = $db->prepare($sql);
+   // PDO::PARAM_STR valeur par défaut, pas besoin de le notifier
+   $query->bindvalue(":film", $film, PDO::PARAM_STR);
+   $query->bindvalue(":categorie", $categorie);  
+   $query->execute();
+   require_once("close.php");
+   header("location: index.php");
+   
+}
 
-
-
-
-
-
-
+}
+  ?>
 
 
 <!DOCTYPE html>
