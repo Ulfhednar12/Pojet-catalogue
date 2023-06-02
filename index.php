@@ -66,7 +66,7 @@
       <button class="favorite styled" type="button" url="">Action</button>
       <button class="favorite styled" type="button" url="">Comédie</button>
       <button class="favorite styled" type="button" url="">Western</button>
-      <button class="deconnexion" type="button" url="deconnexion.php">Déconnexion</button>
+      <button class="deconnexion" type="button" url="deconnexion.php">Connexion</button>
 
     </div>
   </div>
