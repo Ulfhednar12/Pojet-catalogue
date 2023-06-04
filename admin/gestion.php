@@ -12,10 +12,8 @@
 ?>
 
 <body>
-<h1>Profil de  <?= $_SESSION["user"]["pseudo"] ?></h1>
-<p>Pseudo : <?= $_SESSION["user"]["pseudo"] ?></p>
-<p>Email: <?= $_SESSION["user"]["email"] ?></p>
 
+<button type="button" class="btn btn-dark"><a href="ajout.php">Ajouter un film</a></button>
 <table class="table">
   <thead>
     <tr>
@@ -24,6 +22,8 @@
       <th scope="col">Image</th>
       <th scope="col">Vidéo</th>
       <th scope="col">Catégorie</th>
+      <th scope="col">Modifier</th>
+      <th scope="col">Supprimer</th>
     </tr>
   </thead>
   <tbody>
@@ -34,6 +34,9 @@
       <td class="image"><img src="image/<?= $valeur['image'] ?>"></td>
       <td><iframe width="300" height="150" src="<?= $valeur['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
       <td><?= $valeur['nomdecategorie'] ?></td><!-- nom de categorie par rapport à la jointure faite entre la table film et categorie -->
+   
+    <td> <a href="modif.php?id=<?= $valeur['id'] ?>">modifier</a></td> <!--lien pour supprimer et modifier-->
+    <td><a href="">supprimer</a></td>
     </tr>
     <?php } ?>
 
