@@ -2,8 +2,8 @@
 <?php
 // Connexion à la base de données
   if ($_POST){
-    if (isset($_POST["film"])
-        && isset($_POST["categorie"])
+    if (isset($_POST["email"])
+        && isset($_POST["pass"])
         
 ) {
    //print_r($_POST);
@@ -24,6 +24,8 @@
 
 }
   ?>
+
+
 
 
 <!DOCTYPE html>
@@ -59,15 +61,19 @@
       <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
     </div>
     <div class="burger-links">
-      <button class="favorite styled" type="button" url="">Horreur</button>
-      <button class="favorite styled" type="button" url="">Sci-fi</button>
-      <button class="favorite styled" type="button" url="">Thriller</button>
-      <button class="favorite styled" type="button" url="">Romance</button>
-      <button class="favorite styled" type="button" url="">Action</button>
-      <button class="favorite styled" type="button" url="">Comédie</button>
-      <button class="favorite styled" type="button" url="">Western</button>
-      <button class="deconnexion" type="button" url="deconnexion.php">Connexion</button>
-
+      <a href="horreur.php"> <button class="favorite styled">Horreur</button></a>
+      <a href="horreur.php"> <button class="favorite styled">SCI-FI</button></a>
+      <a href="horreur.php"> <button class="favorite styled">Thriller</button></a>
+      <a href="horreur.php"> <button class="favorite styled">Romance</button></a>
+      <a href="horreur.php"> <button class="favorite styled">action</button></a>
+      <a href="horreur.php"> <button class="favorite styled">Comedie</button></a>
+      <a href="horreur.php"> <button class="favorite styled">Western</button></a>
+     <?php if(!isset($_SESSION["users"])): ?>
+        <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
+        
+<?php else: ?>
+    <li><a href="deconnexion.php">deconnexion</a></li>
+    <?php endif; ?>
     </div>
   </div>
 </header>
@@ -76,7 +82,7 @@
 
 
 
-</head>
+
 <body>
 
 
