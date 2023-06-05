@@ -1,0 +1,17 @@
+body{
+    background-image: url(../image/Joker.jpg);
+    background-size: cover;
+}
+.image img{
+    width: 120px;
+}
+.formulaire{
+    display: block;
+    margin: 130px auto;
+    width: 40%;
+    border: 1px solid white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+    background-color: aliceblue;
+   
+}
