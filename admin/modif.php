@@ -18,7 +18,7 @@ require "connect.php";
             //&& isset($_POST["idcategorie"]) && !empty($_POST["idcategorie"])
             
         ) {
-            $id=strip_tags($_GET["id"]);
+            $id = strip_tags($_POST["id"]);
             $nom = strip_tags($_POST["nom"]); //strip_tags=pour securisé et que la personne qui enregistre dans le formulaire ne puisse pas mettre de balise php ou html
             $description = strip_tags($_POST["description"]);
             $video = strip_tags($_POST["video"]);
@@ -31,13 +31,12 @@ require "connect.php";
             $sth->bindvalue(":description", $description, PDO::PARAM_STR);//pour récupérer les valeurs si on les moidifie
             $sth->bindvalue(":video", $video, PDO::PARAM_STR);//pour récupérer les valeurs si on les moidifie
             $sth->bindvalue(":image", $image, PDO::PARAM_STR);//pour récupérer les valeurs si on les moidifie
-            $sth->bindvalue(":idcategorie", $idcategorie); //pour récupérer les valeurs si on les moidifie
+            $sth->bindvalue(":idcategorie", $idcategorie, PDO::PARAM_INT); //pour récupérer les valeurs si on les moidifie
             $sth->execute();
        
-            header("Location:gestion.php");
-        }else{
-            echo "vous n'avez pas rempli correctement";
+            
         }
+        header("Location: gestion.php");  
     }
 
         if(isset($_GET["id"]) && !empty ($_GET["id"])){
@@ -86,7 +85,7 @@ require "connect.php";
     <option selected>choisissez</option>
     <?php foreach ($resultats as $valeur){
 ?>
-    <option name="idcategorie" value="<?= $valeur["idcategorie"] ?>"><?= $valeur["idcategorie"] ?> - <?= $valeur["nomdecategorie"] ?></option> <!-- récupére les catégorie de film dans la base de donné avec un SELECT-->
+    <option name="idcategorie" value="<?= $valeur["idcategorie"] ?>"><?= $valeur["idcategorie"] ?>, <?= $valeur["nomdecategorie"] ?></option> <!-- récupére les catégorie de film dans la base de donné avec un SELECT-->
 
     <?php
     }

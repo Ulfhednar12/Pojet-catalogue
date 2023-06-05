@@ -18,13 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="profil.php">acceuil</a>
+          <a class="nav-link active" aria-current="page" href="profil.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a  class="nav-link" href="gestion.php">gérer les films</a>
+          <a  class="nav-link" href="gestion.php">Gérer les films</a>
         </li>
         <li class="nav-item">
-          <a href="index.php" class="nav-link">retour au site</a>
+          <a href="index.php" class="nav-link">Retour au site</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
