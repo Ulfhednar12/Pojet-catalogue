@@ -1,33 +1,3 @@
-
-<?php
-// Connexion à la base de données
-  if ($_POST){
-    if (isset($_POST["email"])
-        && isset($_POST["pass"])
-        
-) {
-   //print_r($_POST);
-   require_once("connect.php");
-   $film = strip_tags($_POST["film"]);
-   $categorie = strip_tags($_POST["categorie"]);
-   // INSERT INTO, introduit des infos dans la table
-   $sql = "INSERT INTO video_online (film, categorie) VALUES (:film, :categorie)";
-   $query = $db->prepare($sql);
-   // PDO::PARAM_STR valeur par défaut, pas besoin de le notifier
-   $query->bindvalue(":film", $film, PDO::PARAM_STR);
-   $query->bindvalue(":categorie", $categorie);  
-   $query->execute();
-   require_once("close.php");
-   header("location: index.php");
-   
-}
-
-}
-  ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -61,109 +31,23 @@
       <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
     </div>
     <div class="burger-links">
-      <a href="./horreur.php"> <button class="favorite styled">Horreur</button></a>
-      <a href="/sci-fi.php"> <button class="favorite styled">SCI-FI</button></a>
-      <a href="/thriller.php"> <button class="favorite styled">Thriller</button></a>
-      <a href="/romance.php"> <button class="favorite styled">Romance</button></a>
-      <a href="/action.php"> <button class="favorite styled">action</button></a>
-      <a href="/comedie.php"> <button class="favorite styled">Comedie</button></a>
-      <a href="/western.php"> <button class="favorite styled">Western</button></a>
+      <a href="horreur.php"> <button class="favorite styled">Horreur</button></a>
+      <a href="sci-fi.php"> <button class="favorite styled">SCI-FI</button></a>
+      <a href="thriller.php"> <button class="favorite styled">Thriller</button></a>
+      <a href="romance.php"> <button class="favorite styled">Romance</button></a>
+      <a href="action.php"> <button class="favorite styled">action</button></a>
+      <a href="comedie.php"> <button class="favorite styled">Comedie</button></a>
+      <a href="western.php"> <button class="favorite styled">Western</button></a>
      <?php if(!isset($_SESSION["users"])): ?>
         <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
         
 <?php else: ?>
-    <li><a href="deconnexion.php">deconnexion</a></li>
+    <li><a href="deconnexion.php"><button class="favorite styled">Déconnexion</button></a></li>
     <?php endif; ?>
     </div>
   </div>
 </header>
-
-
-
-
-
-
-<body>
-
-
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  
-  <img src="image/advenger.png" style="width:100%">
-  <div class="text">Advengers</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="image/Joker.jpg" style="width:100%">
-  <div class="text">Joker</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="image/Wonder-Woman.jpg" style="width:100%">
-  <div class="text">Wonder Woman</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="image/Ambulance.jpg" style="width:100%">
-  <div class="text">Ambulance</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="image/dunkerque.jpg" style="width:100%">
-  <div class="text">Dunkerque</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="image/topgun.jpg" style="width:100%">
-  <div class="text">Top Gun</div>
-</div>
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
-</script>
-
-
-
-
-
-    <h1 class="films_affiche">Films à l'affiche</h1>
+<h1 class="films_affiche">Films à l'affiche</h1>
 <div class="align_card">
   <div class="card-container">
     <div class="card" style="width: 18rem;">
