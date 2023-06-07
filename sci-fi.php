@@ -67,10 +67,10 @@
       <a href="comedie.php"> <button class="favorite styled">Comedie</button></a>
       <a href="western.php"> <button class="favorite styled">Western</button></a>
      <?php if(!isset($_SESSION["users"])): ?>
-        <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
+        <a href="connexion.php"><button class="connexion">Connexion</button></a>
         
 <?php else: ?>
-    <li><a href="deconnexion.php"><button class="favorite styled">Déconnexion</button></a></li>
+    <li><a href="deconnexion.php"><button class="connexion">Déconnexion</button></a></li>
     <?php endif; ?>
     </div>
   </div>

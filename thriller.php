@@ -39,14 +39,17 @@
       <a href="comedie.php"> <button class="favorite styled">Comedie</button></a>
       <a href="western.php"> <button class="favorite styled">Western</button></a>
      <?php if(!isset($_SESSION["users"])): ?>
-        <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
-        
-<?php else: ?>
-    <li><a href="deconnexion.php"><button class="favorite styled">Déconnexion</button></a></li>
+        <a href="connexion.php"><button class="connexion">Connexion</button></a>        
+    <?php else: ?>
+        <a href="deconnexion.php"><button class="connexion">Déconnexion</button></a>
     <?php endif; ?>
     </div>
   </div>
 </header>
+
+
+
+
 <h1 class="films_affiche">Films à l'affiche</h1>
 <div class="align_card">
   <div class="card-container">
@@ -61,19 +64,19 @@
   </div>
   <div class="card-container">
     <div class="card" style="width: 18rem;">
-        <img src="image/venum.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+        <img src="image/getout.jpg" class="card-img-top" alt="..." height="450px" width="auto">
       <div class="card-body">
-        <h5 class="card-title">Venum</h5>
+        <h5 class="card-title">Get Out</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
-  </div>
+  </div>0000
   <div class="card-container">
     <div class="card" style="width: 18rem;">
-        <img src="image/Avatar.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+        <img src="image/le_serpent.jpg" class="card-img-top" alt="..." height="450px" width="auto">
       <div class="card-body">
-        <h5 class="card-title">Avatar</h5>
+        <h5 class="card-title">Le Serpent</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
