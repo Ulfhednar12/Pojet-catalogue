@@ -1,28 +1,16 @@
-<?php
-// Connexion à la base de données
-  if ($_POST){
-    if (isset($_POST["email"])
-        && isset($_POST["pass"])
-        
-) {
-   //print_r($_POST);
-   require_once("connect.php");
-   $film = strip_tags($_POST["film"]);
-   $categorie = strip_tags($_POST["categorie"]);
-   // INSERT INTO, introduit des infos dans la table
-   $sql = "INSERT INTO video_online (film, categorie) VALUES (:film, :categorie)";
-   $query = $db->prepare($sql);
-   // PDO::PARAM_STR valeur par défaut, pas besoin de le notifier
-   $query->bindvalue(":film", $film, PDO::PARAM_STR);
-   $query->bindvalue(":categorie", $categorie);  
-   $query->execute();
-   require_once("close.php");
-   header("location: index.php");
-   
-}
+<?php 
+    session_start();
+    include "headeradmin.php";
+    require "connect.php";
+    $sql = "SELECT * FROM film
+    LEFT JOIN categorie ON film.idcategorie = categorie.idcategorie WHERE nomdecategorie = 'horreur'";
+    $query = $db->prepare($sql);
 
-}
-  ?>
+    $query->execute();
+  
+    $resultat = $query->fetch();
+    
+?>
 
 
 
@@ -75,93 +63,19 @@
     </div>
   </div>
 </header>
-<h1 class="films_affiche">Films à l'affiche</h1>
-<div class="align_card">
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/legend.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Je suis une légende</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/venum.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Venum</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/Avatar.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Avatar</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/pirate.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Pirates des Caraïbes</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/leon.webp" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Léon</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/transformers3.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Transformers 3</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/parker.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Parker</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/harry.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Harry Potter</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
 
+<?php foreach ($resultat as $valeur){ ?><!-- boucle pour afficher chaque données de la table film -->
+    <tr>
+      <th scope="row"><?= $valeur['nom'] ?></th>
+      <td><?= $valeur['description'] ?></td>
+      <td class="image"><img src="image/<?= $valeur['image'] ?>"></td>
+      <td><iframe width="300" height="150" src="<?= $valeur['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+      <td><?= $valeur['nomdecategorie'] ?></td><!-- nom de categorie par rapport à la jointure faite entre la table film et categorie -->
+    </tr>
+    <?php } ?>
 
 
 
