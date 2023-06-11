@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "connect.php";
-include "headeradmin.php";
+
 
 
 $sql = "SELECT * FROM film 
@@ -44,19 +44,21 @@ $resultat = $query->fetchAll();
       <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
     </div>
     <div class="burger-links">
-      <a href="Horreur.php"> <button class="favorite styled">Horreur</button></a>
+    <a href="index.php"> <button class="favorite styled">Accueil</button></a>
+      <a href="horreur.php"> <button class="favorite styled">Horreur</button></a>
       <a href="sci-fi.php"> <button class="favorite styled">SCI-FI</button></a>
       <a href="thriller.php"> <button class="favorite styled">Thriller</button></a>
       <a href="romance.php"> <button class="favorite styled">Romance</button></a>
       <a href="action.php"> <button class="favorite styled">Action</button></a>
       <a href="comedie.php"> <button class="favorite styled">Comédie</button></a>
       <a href="western.php"> <button class="favorite styled">Western</button></a>
-     <?php if(!isset($_SESSION["users"])): ?>
+      <?php if(!isset($_SESSION["user"])){ ?>
         <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
-        
-<?php else: ?>
-    <li><a href="deconnexion.php">Déconnexion</a></li>
-    <?php endif; ?>
+        <a href="inscription.php"><button class="favorite styled">inscription</button></a> 
+<?php }else{ ?>
+  <a href="profil.php"><button class="favorite styled">Mon compte</button></a>
+          <a href="deconnexion.php"><button class="favorite styled">Deconnexion</button></a>
+    <?php } ?>
     </div>
   </div>
 </header>
@@ -71,7 +73,7 @@ $resultat = $query->fetchAll();
       <div class="card-body">
         <h5 class="card-title"><?= $valeur['nom'] ?></h5>
         <p class="card-text"><?= $valeur['description'] ?></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="description.php?id=<?= $valeur['id'] ?>" class="btn btn-primary">Lire +</a>
     </div>
       </div>
     </div>

@@ -1,28 +1,13 @@
 
 <?php
-// Connexion à la base de données
-  if ($_POST){
-    if (isset($_POST["email"])
-        && isset($_POST["pass"])
-        
-) {
-   //print_r($_POST);
-   require_once("connect.php");
-   $film = strip_tags($_POST["film"]);
-   $categorie = strip_tags($_POST["categorie"]);
-   // INSERT INTO, introduit des infos dans la table
-   $sql = "INSERT INTO video_online (film, categorie) VALUES (:film, :categorie)";
-   $query = $db->prepare($sql);
-   // PDO::PARAM_STR valeur par défaut, pas besoin de le notifier
-   $query->bindvalue(":film", $film, PDO::PARAM_STR);
-   $query->bindvalue(":categorie", $categorie);  
-   $query->execute();
-   require_once("close.php");
-   header("location: index.php");
-   
-}
+session_start();// c'est une variable de session qui laisse connecter l'utilisateur
 
-}
+require "connect.php";
+$sql = "SELECT * FROM film 
+LEFT JOIN categorie ON film.idcategorie = categorie.idcategorie LIMIT 10";
+$query = $db->prepare($sql);
+$query->execute();
+$resultat = $query->fetchAll();
   ?>
 
 
@@ -61,19 +46,21 @@
       <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
     </div>
     <div class="burger-links">
-      <a href="horreur.php"> <button class="favorite styled">Horreur</button></a>
-      <a href="horreur.php"> <button class="favorite styled">SCI-FI</button></a>
-      <a href="horreur.php"> <button class="favorite styled">Thriller</button></a>
-      <a href="horreur.php"> <button class="favorite styled">Romance</button></a>
-      <a href="horreur.php"> <button class="favorite styled">action</button></a>
-      <a href="horreur.php"> <button class="favorite styled">Comedie</button></a>
-      <a href="horreur.php"> <button class="favorite styled">Western</button></a>
-     <?php if(!isset($_SESSION["users"])): ?>
+    <a href="index.php"> <button class="favorite styled">Accueil</button></a>
+    <a href="horreur.php"> <button class="favorite styled">Horreur</button></a>
+      <a href="sci-fi.php"> <button class="favorite styled">SCI-FI</button></a>
+      <a href="thriller.php"> <button class="favorite styled">Thriller</button></a>
+      <a href="romance.php"> <button class="favorite styled">Romance</button></a>
+      <a href="action.php"> <button class="favorite styled">Action</button></a>
+      <a href="comedie.php"> <button class="favorite styled">Comédie</button></a>
+      <a href="western.php"> <button class="favorite styled">Western</button></a>
+     <?php if(!isset($_SESSION["user"])){ ?>
         <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
-        
-<?php else: ?>
-    <li><a href="deconnexion.php">deconnexion</a></li>
-    <?php endif; ?>
+        <a href="inscription.php"><button class="favorite styled">inscription</button></a> 
+<?php }else{ ?>
+  <a href="profil.php"><button class="favorite styled">Mon compte</button></a>
+          <a href="deconnexion.php"><button class="favorite styled">Deconnexion</button></a>
+    <?php } ?>
     </div>
   </div>
 </header>
@@ -164,90 +151,21 @@ function showSlides() {
 
 
     <h1 class="films_affiche">Films à l'affiche</h1>
-<div class="align_card">
-  <div class="card-container">
+    <div class="align_card">
+    <?php foreach ($resultat as $valeur){ ?><!-- boucle pour afficher chaque données de la table film -->
+      <div class="card-container">
     <div class="card" style="width: 18rem;">
-        <img src="image/legend.jpg" class="card-img-top" alt="..." height="450px" width="auto">
+        <img src="image/<?= $valeur['image'] ?>" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Je suis une légende</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title"><?= $valeur['nom'] ?></h5>
+        <p class="card-text"><?= $valeur['description'] ?></p>
+        <a href="description.php?id=<?= $valeur['id'] ?>" class="btn btn-primary">Lire +</a>
+    </div>
       </div>
     </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/venum.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Venum</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+  
+    <?php } ?>
     </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/Avatar.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Avatar</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/pirate.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Pirates des Caraïbes</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/leon.webp" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Léon</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/transformers3.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Transformers 3</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/parker.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Parker</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/harry.jpg" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title">Harry Potter</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 
 

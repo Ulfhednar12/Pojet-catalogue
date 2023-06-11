@@ -254,14 +254,15 @@ to {opacity: 1}
     font-family: 'Karantina', sans-serif;
     font-size: 80px;
     text-align: center;
-    margin-top: auto;
+    margin-top: 175px;
     
 }
 
 .align_card{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+ 
 }
 
 .card-container {
@@ -274,14 +275,15 @@ to {opacity: 1}
   width: 18rem;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ 
   border-radius: 10px;
   text-align: center;
 }
 
 .card-img-top {
   height: 250px;
-  width: auto;
-  
+  width: 18rem;
+  object-fit: cover; /* adapte l'image à la taille de la carte*/
   
 }
 
@@ -295,8 +297,11 @@ to {opacity: 1}
 }
 
 .card-text {
+  height: 100px;
   font-size: 14px;
   margin-bottom: 20px;
+overflow-y: hidden;
+  
 }
 
 .btn-primary {
@@ -311,7 +316,6 @@ to {opacity: 1}
     margin: 50px;
   }
 }
-
 
 
 
@@ -398,4 +402,34 @@ figcaption {
 }
 .filmsaffiche {
   margin-top: 200px;
+}
+/*pour les description*/
+.description {
+  display: block;
+  margin: 190px auto 50px auto;
+  padding: 25px;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+.description h1 {
+  text-align: center;
+}
+/*pour la page individuelle*/
+.description img{
+  width: 500px;
+  display: block;
+  margin: auto;
+}
+.description p {
+  display: block;
+  margin: 50px auto;
+  width: 70%;
+}
+iframe {
+  display: block;
+  margin: auto;
+  width: 600px;
+  height: 350px;
+  margin-bottom: 50px;
 }
