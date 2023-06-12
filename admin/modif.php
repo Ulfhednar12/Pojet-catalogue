@@ -1,6 +1,6 @@
 <?php
 session_start();// c'est une variable de session qui laisse connecter l'utilisateur
-include "headeradmin.php";// headar admin est le menudu back office, je l'inclus dans cette page
+include "headeradmin.php";// header admin est le menu du back office, je l'inclus dans cette page
 require "connect.php";
 
 if ($_POST) { // si on appuie sur le boutton "enregistrer"

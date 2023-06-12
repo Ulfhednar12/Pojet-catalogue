@@ -68,7 +68,7 @@ if (!empty($_GET['id']) && isset($_GET['id'])) {
 </header>
 <section class="description">
 <h1><?= $resultat["nom"] ?></h1><!--quand on affiche le php juste (?=)-->
-<img src="image/<?= $resultat["image"] ?>" alt="photos de films"> <!-- on choissis le dossier ou sont les imùages et on affiche la source de l'image-->
+<img src="image/<?= $resultat["image"] ?>" alt="photos de films"> <!-- on choissis le dossier ou sont les images et on affiche la source de l'image-->
 <p><?= $resultat["description"] ?></p><!--pour reprendre la description enregistrer dans la BDD-->
 <iframe width="300" height="150" src="<?= $resultat['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <!--pour reprend la videos-->
 
