@@ -38,4 +38,79 @@
     <?php } ?>
 
   </tbody>
+<style>/* Styles pour le profil */
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+/* Styles pour la table */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Styles pour les images */
+.image {
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styles responsifs */
+
+/* Pour les écrans jusqu'à 768 pixels de large */
+@media screen and (max-width: 768px) {
+  /* Réduire la taille de la police pour le profil */
+  h1, p {
+    font-size: 18px;
+  }
+
+  /* Centrer les éléments de la table */
+  .table th,
+  .table td {
+    text-align: center;
+  }
+
+  /* Ajuster la taille des images dans la table */
+  .image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  /* Ajuster la taille de l'iframe dans la table */
+  .table iframe {
+    width: 100%;
+    max-width: 200px;
+    height: 100px;
+  }
+}
+
+/* Pour les écrans supérieurs à 768 pixels de large */
+@media screen and (min-width: 769px) {
+  /* Aucune modification pour les styles du profil et de la table */
+}
+</style>
 </table>

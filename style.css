@@ -281,8 +281,7 @@ to {opacity: 1}
 }
 
 .card-img-top {
-  height: 250px;
-  width: 18rem;
+  
   object-fit: cover; /* adapte l'image à la taille de la carte*/
   
 }
@@ -403,33 +402,78 @@ figcaption {
 .filmsaffiche {
   margin-top: 200px;
 }
-/*pour les description*/
+/* Pour les description */
 .description {
   display: block;
   margin: 190px auto 50px auto;
   padding: 25px;
   width: 80%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
 }
+
 .description h1 {
   text-align: center;
+  font-family: 'Karantina', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 90px;
 }
-/*pour la page individuelle*/
-.description img{
+
+/* Pour la page individuelle */
+.description img {
   width: 500px;
   display: block;
   margin: auto;
 }
+
 .description p {
   display: block;
   margin: 50px auto;
   width: 70%;
+  font-family: 'Karantina', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    
 }
+
 iframe {
   display: block;
   margin: auto;
   width: 600px;
   height: 350px;
   margin-bottom: 50px;
+}
+
+/* Styles responsifs */
+
+/* Pour les écrans jusqu'à 768 pixels de large */
+@media screen and (max-width: 768px) {
+  .description {
+    margin: 50px auto;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .description img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .description p {
+    margin: 25px auto;
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 300px;
+    height: 150px;
+    margin-bottom: 25px;
+  }
+}
+
+/* Pour les écrans supérieurs à 768 pixels de large */
+@media screen and (min-width: 769px) {
+  /* Aucune modification pour les styles descriptifs et de la page individuelle */
 }

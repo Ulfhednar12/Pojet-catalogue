@@ -32,7 +32,7 @@ $resultat = $query->fetchAll();
   <header>
     <div class="contener_logo">
       <img src="image/logo.jpg" alt="" height="80px" width="80px">
-      <h1 class="titre_logo">Vidéo en ligne</h1>
+      <h1 class="titre_logo">Vidéo Online</h1>
       <img src="" alt="">
 
     </div>
@@ -70,7 +70,7 @@ $resultat = $query->fetchAll();
     <?php foreach ($resultat as $valeur) { ?><!-- boucle pour afficher chaque données de la table film -->
       <div class="card-container">
         <div class="card" style="width: 18rem;">
-          <img src="image/<?= $valeur['image'] ?>" class="card-img-top" alt="..." height="450px" width="auto">
+          <img src="image/<?= $valeur['image'] ?>" class="card-img-top" alt="..." height="250px" width="auto">
           <div class="card-body">
             <h5 class="card-title"><?= $valeur['nom'] ?></h5>
             <p class="card-text"><?= $valeur['description'] ?></p>
@@ -81,3 +81,25 @@ $resultat = $query->fetchAll();
 
     <?php } ?>
   </div>
+
+  <footer>
+    <img src="image/logo.jpg" alt="" height="230px" width="auto">
+    <ul class="nav1">
+        <li><a class="svg-icon" href="">Contactez-nous</a></li>
+        <li><a class="svg-icon" href="index.php">Navigation</a></li>
+        <li><a class="svg-icon" href="">Films à l'affiche</a></li>
+        <li><a class="svg-icon" href="">À propos</a></li>
+      </ul>
+      <article class="telecharger">
+        <figure>
+            <img class="uber2" src="img/images/logo_uberEats_2.svg" alt="">
+        </figure>
+        <figcaption><p>Téléchargez l'application Vidéo en ligne</p></figcaption>
+            <button class="telecharger"><img src="image/logo_google_play.svg">GOOGLE PLAY</button>
+            <button class="telecharger"><img src="image/logo_apple.svg">APPLE STORE</button>
+        </article>
+    
+
+  </footer>
+</body>
+</html>

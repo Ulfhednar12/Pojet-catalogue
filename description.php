@@ -66,6 +66,8 @@ if (!empty($_GET['id']) && isset($_GET['id'])) {
     </div>
   </div>
 </header>
+
+
 <section class="description">
 <h1><?= $resultat["nom"] ?></h1><!--quand on affiche le php juste (?=)-->
 <img src="image/<?= $resultat["image"] ?>" alt="photos de films"> <!-- on choissis le dossier ou sont les images et on affiche la source de l'image-->

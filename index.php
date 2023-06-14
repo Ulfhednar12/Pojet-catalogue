@@ -155,7 +155,7 @@ function showSlides() {
     <?php foreach ($resultat as $valeur){ ?><!-- boucle pour afficher chaque données de la table film -->
       <div class="card-container">
     <div class="card" style="width: 18rem;">
-        <img src="image/<?= $valeur['image'] ?>" class="card-img-top" alt="...">
+        <img src="image/<?= $valeur['image'] ?>" class="card-img-top" alt="..." height="250px" width="auto">
       <div class="card-body">
         <h5 class="card-title"><?= $valeur['nom'] ?></h5>
         <p class="card-text"><?= $valeur['description'] ?></p>
