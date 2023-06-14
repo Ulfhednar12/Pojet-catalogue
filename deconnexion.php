@@ -1,4 +1,11 @@
-<?php
-    session_start();
-    unset($_SESSION["user"]);
-    header('Location:index.php');
+<?php 
+Session_start();
+//supprime une variable
+unset($_SESSION["user"]);
+
+header("location: index.php");
+
+
+
+
+?>

@@ -36,9 +36,15 @@
       <td><?= $valeur['nomdecategorie'] ?></td><!-- nom de categorie par rapport à la jointure faite entre la table film et categorie -->
    
     <td> <a href="modif.php?id=<?= $valeur['id'] ?>">modifier</a></td> <!--lien pour supprimer et modifier-->
-    <td><a href="">supprimer</a></td>
+  <td> <a href="delete.php?id=<?=$valeur['id']?>" onclick="return confirmation()">supprimer</a></td>
     </tr>
     <?php } ?>
 
   </tbody>
 </table>
+
+<script>// JS qpour confirmer une suppression
+  function confirmation(){
+    return confirm('voulez vraiment supprimer ?')
+  }
+</script>

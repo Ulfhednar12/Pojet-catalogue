@@ -1,15 +1,20 @@
 <?php
-session_start();
+session_start(); // C'est une variable de session qui permet de garder l'utilisateur connecté
+
 require "connect.php";
-
-
-
-$sql = "SELECT * FROM film 
-LEFT JOIN categorie ON film.idcategorie = categorie.idcategorie WHERE nomdecategorie = 'Horreur'";
-$query = $db->prepare($sql);
-$query->execute();
-$resultat = $query->fetchAll();
+if (!empty($_GET['id']) && isset($_GET['id'])) {
+    // Vérifie que l'id n'est pas vide mais remplie
+    $id = strip_tags($_GET['id']);
+    $query = "SELECT * FROM film WHERE id=:id";//selection tout dans la table film si l'id est strictement = a l'id
+    $query = $db->prepare($query);
+    $query->bindValue(":id", $id); // on lie la valeur a la variable ID
+    $query->execute();
+    $resultat = $query->fetch();
+}
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,13 +30,12 @@ $resultat = $query->fetchAll();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     
 </head>
-
 <body>
 
 <header>
   <div class="contener_logo">
     <img src="image/logo.jpg" alt="" height="80px" width="80px">
-    <h1 class="titre_logo">Vidéo en ligne</h1>
+    <h1 class="titre_logo">Video online</h1>
     <img src="" alt="">
     
   </div>
@@ -49,8 +53,8 @@ $resultat = $query->fetchAll();
       <a href="sci-fi.php"> <button class="favorite styled">SCI-FI</button></a>
       <a href="thriller.php"> <button class="favorite styled">Thriller</button></a>
       <a href="romance.php"> <button class="favorite styled">Romance</button></a>
-      <a href="action.php"> <button class="favorite styled">Action</button></a>
-      <a href="comedie.php"> <button class="favorite styled">Comédie</button></a>
+      <a href="action.php"> <button class="favorite styled">action</button></a>
+      <a href="comedie.php"> <button class="favorite styled">Comedie</button></a>
       <a href="western.php"> <button class="favorite styled">Western</button></a>
       <?php if(!isset($_SESSION["user"])){ ?>
         <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
@@ -62,30 +66,17 @@ $resultat = $query->fetchAll();
     </div>
   </div>
 </header>
-
-
-<h1 class="films_affiche">Films Horreur</h1>
-<div class="align_card">
-    <?php foreach ($resultat as $valeur){ ?><!-- boucle pour afficher chaque données de la table film -->
-      <div class="card-container">
-    <div class="card" style="width: 18rem;">
-        <img src="image/<?= $valeur['image'] ?>" class="card-img-top" alt="..." height="450px" width="auto">
-      <div class="card-body">
-        <h5 class="card-title"><?= $valeur['nom'] ?></h5>
-        <p class="card-text"><?= $valeur['description'] ?></p>
-        <a href="description.php?id=<?= $valeur['id'] ?>" class="btn btn-primary">Lire +</a>
-    </div>
-      </div>
-    </div>
-  
-    <?php } ?>
-    </div>
-    
+<section class="description">
+<h1><?= $resultat["nom"] ?></h1><!--quand on affiche le php juste (?=)-->
+<img src="image/<?= $resultat["image"] ?>" alt="photos de films"> <!-- on choissis le dossier ou sont les images et on affiche la source de l'image-->
+<p><?= $resultat["description"] ?></p><!--pour reprendre la description enregistrer dans la BDD-->
+<iframe width="300" height="150" src="<?= $resultat['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <!--pour reprend la videos-->
 
 
 
-   
-    <footer>
+
+</section>
+<footer>
     <img src="image/logo.jpg" alt="" height="230px" width="auto">
     <ul class="nav1">
         <li><a class="svg-icon" href="">Contactez-nous</a></li>
