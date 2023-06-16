@@ -29,40 +29,46 @@ $resultat = $query->fetchAll();
 
 <body>
 
-  <header>
-    <div class="contener_logo">
-      <img src="image/logo.jpg" alt="" height="80px" width="80px">
-      <h1 class="titre_logo">Vidéo Online</h1>
-      <img src="" alt="">
+<header>
+  <div class="contener_logo">
+    <img src="image/logo.jpg" alt="" height="80px" width="80px">
+    <h1 class="titre_logo">Video Online</h1>
+    <img src="" alt=""> 
+  </div>
 
-    </div>
-    <div class="contener_recherche">
-      <div class="case_recherche">
-        <input type="text" id="rechercher" placeholder="Rechercher">
-        <button class="rechercher">Rechercher</button>
-      </div>
-      <div class="burger-menu">
-        <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
-      </div>
-      <div class="burger-links">
-      <a href="index.php"> <button class="favorite styled">Accueil</button></a>
-        <a href="horreur.php"> <button class="favorite styled">Horreur</button></a>
-        <a href="sci-fi.php"> <button class="favorite styled">SCI-FI</button></a>
-        <a href="thriller.php"> <button class="favorite styled">Thriller</button></a>
-        <a href="romance.php"> <button class="favorite styled">Romance</button></a>
-        <a href="action.php"> <button class="favorite styled">Action</button></a>
-        <a href="comedie.php"> <button class="favorite styled">Comédie</button></a>
-        <a href="western.php"> <button class="favorite styled">Western</button></a>
-        <?php if (!isset($_SESSION["user"])) { ?>
-          <a href="connexion.php"><button class="favorite styled">Connexion</button></a>
-          <a href="inscription.php"><button class="favorite styled">inscription</button></a>
-        <?php } else { ?>
-          <a href="profil.php"><button class="favorite styled">Mon compte</button></a>
-          <a href="deconnexion.php"><button class="favorite styled">Deconnexion</button></a>
-        <?php } ?>
-      </div>
-    </div>
-  </header>
+  
+
+  <div class="burger-menu">
+    <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
+  </div>
+  <div class="burger-links">
+    <a href="index.php">Accueil</a>
+    <a href="horreur.php">Horreur</a>
+    <a href="sci-fi.php">SCI-FI</a>
+    <a href="thriller.php">Thriller</a>
+    <a href="romance.php">Romance</a>
+    <a href="action.php">Action</a>
+    <a href="comedie.php">Comédie</a>
+    <a href="western.php">Western</a>
+    <?php if(!isset($_SESSION["user"])){ ?>
+      <a href="connexion.php">Connexion</a>
+      <a href="inscription.php">Inscription</a> 
+    <?php } else { ?>
+      <a href="profil.php">Mon compte</a>
+      <a href="deconnexion.php">Déconnexion</a>
+    <?php } ?>
+  </div>
+</header>
+
+<script>
+  // Code JavaScript pour le menu burger
+  const burgerMenu = document.querySelector('.burger-menu');
+  const burgerLinks = document.querySelector('.burger-links');
+
+  burgerMenu.addEventListener('click', () => {
+    burgerLinks.classList.toggle('show');
+  });
+</script>
 
 
   <h1 class="films_affiche">Films action</h1>

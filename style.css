@@ -1,11 +1,223 @@
 
 body {
     margin: 0;
-    
+    background-image: url(image/background_image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+
 }
 
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+  }
 
-                                      /***** HEADER *****/
+
+
+ /* Styles CSS pour le menu burger et le mode responsive */
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.contener_logo {
+  display: flex;
+  align-items: center;
+}
+
+.contener_logo img {
+  margin-right: 10px;
+}
+
+.titre_logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.contener_recherche {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.case_recherche {
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+}
+
+.rechercher {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  width: 30px;
+  height: auto;
+}
+
+.burger-links {
+  display: flex;
+}
+
+.burger-links a {
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contener_logo {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 130px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-links {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .burger-links.show {
+    display: flex;
+  }
+}
+
+/* Styles pour le header 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.contener_logo {
+  display: flex;
+  align-items: center;
+}
+
+.contener_logo img {
+  margin-right: 10px;
+}
+
+.titre_logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.contener_recherche {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.case_recherche {
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+}
+
+.rechercher {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-links {
+  display: flex;
+  align-items: center;
+}
+
+.burger-links a {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Styles pour le mode responsive 
+  .contener_logo {
+    flex-grow: 1;
+  }
+
+  .contener_recherche {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger-icon {
+    width: 30px;
+  }
+
+  .burger-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+
+  .burger-links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+*/
+
+
+
+
+
+
+
+                                      /***** HEADER 
 
 header {
   display: block;
@@ -64,6 +276,7 @@ header {
   align-items: center;
 }
 
+
 .styled,
 .rechercher {
   border: 0;
@@ -99,9 +312,9 @@ header {
 
 .burger-icon {
   display: none;
-}
+}*****/
 
-/*** Responsive ***/
+/*** Responsive 
 
 
 
@@ -153,7 +366,7 @@ header {
     cursor: pointer;
   }
 }
-
+***/
 
                                 /***** FIN HEADER *****/
 
@@ -184,7 +397,7 @@ margin-top: 12%;
 }
 @media only screen and (max-width: 768px) {
 .slideshow-container {
-  margin-top: 40%;
+  margin-top: 65%;
 }
 }
                                   
@@ -275,7 +488,7 @@ to {opacity: 1}
   width: 18rem;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
- 
+  background-color: #fff;
   border-radius: 10px;
   text-align: center;
 }
@@ -318,7 +531,11 @@ to {opacity: 1}
 }
 
 
-
+.description {
+  background-color: #fff;
+  border-radius: 40px;
+  
+}
 
 
 
