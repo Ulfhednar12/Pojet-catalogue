@@ -86,3 +86,23 @@ $resultat = $query->fetchAll();
   
     <?php } ?>
     </div>
+
+    <footer>
+    <img src="image/logo.jpg" alt="" height="230px" width="auto">
+    <ul class="nav1">
+        <li><a class="svg-icon" href="">Contactez-nous</a></li>
+        <li><a class="svg-icon" href="index.php">Navigation</a></li>
+        <li><a class="svg-icon" href="">Films à l'affiche</a></li>
+        <li><a class="svg-icon" href="">A propos</a></li>
+      </ul>
+      <article class="telecharger">
+        <figure>
+            <img class="uber2" src="img/images/logo_uberEats_2.svg" alt="">
+        </figure>
+        <figcaption><p>Téléchargez Vidéo online app</p></figcaption>
+            <button class="telecharger"><img src="image/logo_google_play.svg">GOOGLE PLAY</button>
+            <button class="telecharger"><img src="image/logo_apple.svg">APPLE STORE</button>
+        </article>
+    
+
+</footer>
