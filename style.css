@@ -117,6 +117,7 @@ top: 100%;
 left: 0;
 width: 100%;
 padding: 10px 20px;
+margin-top: 0;
 }
                         
 .burger-links.show {
