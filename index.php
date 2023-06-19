@@ -57,7 +57,7 @@ $resultat = $query->fetchAll();
   </div>
 
   <div class="burger-menu">
-    <img src="image/menu-burger-horizontal-svgrepo-com.svg" alt="Menu" class="burger-icon">
+    <img src="image/iconburger.webp" alt="Menu" class="burger-icon">
   </div>
   <div class="burger-links">
     <a href="index.php">Accueil</a>
